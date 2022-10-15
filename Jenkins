@@ -10,6 +10,8 @@ stages {
 	    }
 	stage ('creating innfra') {
         steps {
+            sh 'terraform init'
+            sh 'terraform validate'
             sh 'terraform apply'
 				 
         }

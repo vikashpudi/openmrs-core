@@ -11,7 +11,7 @@ stages {
 	stage ('creating innfra') {
         steps {
             sh "pwd"
-            sh 'terraform apply'
+            sh 'terraform apply --auto-aprove'
 				 
         }
         }

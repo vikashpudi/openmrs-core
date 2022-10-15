@@ -10,6 +10,7 @@ stages {
 	    }
 	stage ('creating innfra') {
         steps {
+            sh "pwd"
             sh "cd terraform"
             sh "pwd"
             sh 'terraform init'

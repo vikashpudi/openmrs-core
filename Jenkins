@@ -1,5 +1,6 @@
 pipeline { 
 agent{label'JDK-ALL-MAVEN'}
+triggers { pollSCM('H */4 * * 1-5') }
 stages {
 	stage('git cloneing') {
 		steps {
@@ -11,8 +12,7 @@ stages {
         steps {
 				rtMavenDeployer ( 
                 id: "maven-depolyer",
-				//
-                serverId: "JFINSTANCE",
+				serverId: "JFINSTANCE",
                 releaseRepo: 'mymavenrepo',
                 snapshotRepo: 'mymavenrepo'
 				)

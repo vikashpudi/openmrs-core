@@ -1,5 +1,5 @@
 pipeline { 
-agent{label'JDK-ALL-MAVEN'}
+agent{label'DOTNET-TERRAFORM'}
 triggers { pollSCM('H */4 * * 1-5') }
 stages {
 	stage('git cloneing') {
